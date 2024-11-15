@@ -5,6 +5,7 @@ from modules.hidenbot import *
 from modules.bchatsbot import *
 from modules.bichatbot import *
 from modules.bchatcbot import *
+from modules.telecommentsbot import *
 from colorama import *
 import inquirer
 
@@ -28,7 +29,7 @@ def header():
 #App Menu
 def menu():
     header()
-    options = ["@HidenChat_bot", "@BChatsBot", "@BiChatBot", "@BChatcBot", "Base64 Decoder", "Exit"]
+    options = ["@HidenChat_bot", "@BChatsBot", "@BiChatBot", "@BChatcBot", "@TeleCommentsBot", "Base64 Decoder", "Exit"]
     question = [inquirer.List('choice', message="Select an option", choices=options)]
     answer = inquirer.prompt(question)
     return options.index(answer['choice'])
@@ -58,13 +59,18 @@ def main():
         header()
         bchatc()
 
-    #Base64 Decoder
+    #TeleCommentsBot
     elif user_choice == 4:
+        header()
+        telecomments()
+
+    #Base64 Decoder
+    elif user_choice == 5:
         header()
         print(base64decoder(input("Enter Base64 : " + Fore.GREEN), 2))
 
     #Exit
-    elif user_choice == 5:
+    elif user_choice == 6:
         clear()
         exit()
 
