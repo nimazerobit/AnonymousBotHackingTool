@@ -18,7 +18,7 @@ def resetcolor():
 def header():
     clear()
     print(Fore.GREEN + "Telegram Chat Bot Hacking Tool V1.0")
-    print(Fore.GREEN + "---" + Fore.WHITE +"@nimawebdev" + Fore.GREEN + "---------------------")
+    print(Fore.GREEN + "---" + Fore.WHITE +"@nimazerobit" + Fore.GREEN + "--------------------")
     print(Fore.WHITE + "Operating system : " + Fore.CYAN + platform.system())
     print(Fore.WHITE + "Python version : " + Fore.CYAN + platform.python_version())
     print(Fore.GREEN + "-----------------------------------")
