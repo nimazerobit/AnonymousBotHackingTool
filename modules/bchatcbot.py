@@ -20,7 +20,7 @@ def bchatc_messages_menu():
     with open(file_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
-    # Check if the bot id matches with @HidenChat_bot
+    # Check if the bot id matches with @BChatcBot
     if data.get("id") != 5414771497:
         print(Fore.RED + "ERROR: JSON data does not match the required bot ID." + Fore.WHITE)
         return
@@ -55,7 +55,7 @@ def bchatc_messages_menu():
 
 def bchatc():
     print("Tutorial: ")
-    print("  1. Export chat history of @HidenChat_bot")
+    print("  1. Export chat history of @BChatcBot")
     print("  2. Import exported result.json file")
     print("  3. Select the message you want to extract the chat ID from")
     print("  4. Use @usinfobot to get username of the user form it's chat id\n")
