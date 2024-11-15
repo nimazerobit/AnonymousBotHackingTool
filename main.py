@@ -2,7 +2,8 @@ import os
 import platform
 from modules.base64decoder import *
 from modules.hidenbot import *
-from modules.bchats import *
+from modules.bchatsbot import *
+from modules.bichatbot import *
 from colorama import *
 import inquirer
 
@@ -26,7 +27,7 @@ def header():
 #App Menu
 def menu():
     header()
-    options = ["@HidenChat_bot", "@BChatsBot", "Base64 Decoder", "Exit"]
+    options = ["@HidenChat_bot", "@BChatsBot", "@BiChatBot", "Base64 Decoder", "Exit"]
     question = [inquirer.List('choice', message="Select an option", choices=options)]
     answer = inquirer.prompt(question)
     return options.index(answer['choice'])
@@ -46,13 +47,18 @@ def main():
         header()
         bchats()
 
-    #Base64 Decoder
+    #BiChatBot
     elif user_choice == 2:
+        header()
+        bichat()
+
+    #Base64 Decoder
+    elif user_choice == 3:
         header()
         print(base64decoder(input("Enter Base64 : " + Fore.GREEN), 2))
 
     #Exit
-    elif user_choice == 3:
+    elif user_choice == 4:
         clear()
         exit()
 
