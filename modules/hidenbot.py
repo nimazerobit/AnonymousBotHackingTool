@@ -46,7 +46,9 @@ def hidenchat_messages_menu():
         selected_message = answer['choice']
 
         chat_id = base64decoder(button_data[selected_message], 1).split("/")[0]
+        message_id = base64decoder(button_data[selected_message], 1).split("/")[1]
         print(Fore.WHITE + "Chat ID is : " + Fore.CYAN + chat_id + Fore.WHITE)
+        print(Fore.WHITE + "Message ID is : " + Fore.CYAN + message_id + Fore.WHITE)
     else:
         print("No messages found with the specified criteria.")
 
