@@ -28,4 +28,7 @@ Just use menu and tutorials in script ;)
 ## Supported Bots
 
 - @HidenChat_bot
-- Coming Soon...
+- @BChatsBot
+- @BiChatBot
+- @BChatcBot
+- @TeleCommentsBot
